@@ -9,6 +9,9 @@ const citySearch = (e) => {
 	let city = input.value;
 	getWeather(city);
 	input.value = '';
+	if (ui.classList.contains('d-none')) {
+		ui.classList.remove('d-none');
+	}
 };
 
 form.addEventListener('submit', citySearch);
