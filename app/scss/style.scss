@@ -27,7 +27,7 @@ img {
 .container {
 	width: 90%;
 	max-width: 700px;
-	margin: 2em auto;
+	margin: 0 auto;
 	padding: 2em;
 	background: rgba(255, 255, 255, 0.25);
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -39,6 +39,15 @@ img {
 
 .d-none {
 	display: none;
+}
+
+.heading {
+	margin-top: 0;
+	text-align: center;
+	font-size: 2.5rem;
+	background-image: linear-gradient(to right, #ec4895, #858ef8);
+	background-clip: text;
+	color: transparent;
 }
 
 .btn {
