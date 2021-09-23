@@ -47,6 +47,7 @@ img {
   font-size: 2.5rem;
   background-image: linear-gradient(to right, #ec4895, #858ef8);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 
