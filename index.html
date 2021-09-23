@@ -7,7 +7,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./dist/style.css" />
@@ -15,12 +15,28 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="data">
-				<h1>City Name</h1>
-				<h3>temperature</h3>
-				<h2>temp</h2>
-				<h3>description</h3>
-				<p>description</p>
+			<form class="search-form">
+				<input type="text" name="city" placeholder="Enter your City" />
+				<button type="submit" class="btn">Search</button>
+			</form>
+
+			<div class="ui">
+				<h1 class="lead">
+					<span class="city">Peshawar,</span>
+					<span class="country">PK</span>
+				</h1>
+				<div class="temp-info">
+					<img src="" alt="icon" class="icon" />
+					<h2 class="temp">28 <span>&deg;</span></h2>
+					<p class="unit">C</p>
+				</div>
+
+				<p class="condition">Clear Sky</p>
+
+				<div class="add-info">
+					<p class="feels">Feels Like 29 &deg; C</p>
+					<p class="humidity">Humidity 63%</p>
+				</div>
 			</div>
 		</div>
 

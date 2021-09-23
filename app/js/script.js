@@ -1,24 +1,44 @@
-const data = document.querySelector('.data');
-const h1 = document.querySelector('h1');
-const h2 = document.querySelector('h2');
-const p = document.querySelector('p');
+const ui = document.querySelector('.ui');
+const form = document.querySelector('.search-form');
+// api key
 const key = '357dc6bc6eef2894e1e0977f88f5082f';
+
+const citySearch = (e) => {
+	e.preventDefault();
+	let city = form.city.value;
+	getWeather(city);
+};
+
+form.addEventListener('submit', citySearch);
 
 const getWeather = async (city) => {
 	const base = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
 
 	const response = await fetch(base);
 	const data = await response.json();
-	console.log(data);
-	const { weather, main, name } = data;
 
-	h1.textContent = name;
-	h2.textContent = main.temp - 273;
-	p.textContent = weather[0].description;
+	const { weather, main, name, sys } = data;
 
-	// console.log(weather, main);
+	ui.innerHTML = `
+			<div class="ui">
+				<h1 class="lead">
+					<span class="city">${name},</span>
+					<span class="country">${sys.country}</span>
+				</h1>
+				<div class="temp-info">
+					<img src="http://openweathermap.org/img/w/${
+						weather[0].icon
+					}.png" alt="icon" class="icon" />
+					<h2 class="temp">${Math.round(main.temp - 273.15)} <span>&deg;</span></h2>
+					<p class="unit">C</p>
+				</div>
 
-	// console.log(weather[0].description, Math.round(main.temp - 273.15) + ' C');
+				<p class="condition">${weather[0].description}</p>
+
+				<div class="add-info">
+					<p class="feels">Feels Like ${Math.round(main.feels_like - 273.15)} &deg; C</p>
+					<p class="humidity">Humidity ${main.humidity + '&#37'}</p>
+				</div>
+			</div>
+`;
 };
-
-getWeather('london');

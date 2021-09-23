@@ -11,10 +11,104 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background: url(/assets/pink-clouds.jpg) no-repeat center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.d-none {
+  display: none;
+}
+
+.btn {
+  display: block;
+  padding: 0.5em 1.5em;
+  background: linear-gradient(to right, #f7a9d6, #858ef8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: -0.1em;
+}
+
+.btn:hover, .btn:focus {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 0.5em;
+  font-family: inherit;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.ui {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.temp-info {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp-info .temp {
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+}
+
+.temp-info .temp span {
+  font-size: 3rem;
+}
+
+.temp-info .unit {
+  font-size: 3rem;
+}
+
+.condition {
+  margin-top: -2em;
+  margin-bottom: 4em;
+  margin-left: -2em;
+}
+
+.add-info {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
