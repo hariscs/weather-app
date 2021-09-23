@@ -1,12 +1,14 @@
 const ui = document.querySelector('.ui');
 const form = document.querySelector('.search-form');
+const input = document.querySelector('.search-form input');
 // api key
 const key = '357dc6bc6eef2894e1e0977f88f5082f';
 
 const citySearch = (e) => {
 	e.preventDefault();
-	let city = form.city.value;
+	let city = input.value;
 	getWeather(city);
+	input.value = '';
 };
 
 form.addEventListener('submit', citySearch);
