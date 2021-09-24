@@ -52,11 +52,11 @@ form.addEventListener('submit', (e) => {
 		ui.classList.remove('d-none');
 	}
 
-	localStorage.setItem('city', city);
+	// localStorage.setItem('city', city);
 });
 
-if (localStorage.getItem('city')) {
-	getWeather(localStorage.getItem('city'))
-		.then((data) => updateUI(data))
-		.catch((err) => console.log(err));
-}
+// if (localStorage.getItem('city')) {
+// 	getWeather(localStorage.getItem('city'))
+// 		.then((data) => updateUI(data))
+// 		.catch((err) => console.log(err));
+// }
